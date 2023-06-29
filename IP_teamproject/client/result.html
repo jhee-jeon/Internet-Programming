@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+   <head>
+        <meta charset="utf-8">
+        <title>YonseiExchangeStudent</title>
+        <style>
+            @import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+        </style>
+        <link href="css/reset.css" rel="stylesheet" type="text/css" />
+        <link href="css/style.css" rel="stylesheet" type="text/css" />
+        <link href="plugins/web-fonts-with-css/css/all.css" rel="stylesheet" type="text/css" />
+        <script src="js/jquery.1.12.4.js" type="text/javascript"></script>
+        <script src="https://use.fontawesome.com/releases/v5.2.0/js/all.js"></script>
+
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+        
+        <script src="js/result.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="popUp">
+                <div class="closeBtn" onclick="removePopup()">
+                    <i class="fas fa-window-close"></i>
+                </div>
+                <div class="screenshotBtn">
+                    <i class="fas fa-camera" onclick="capture()"></i>
+                </div>
+                <div id="popUp_content">
+                    <p class="country">South Korea</p>
+                    <p class="university">Yonsei University</p>
+                    
+                    <div class="popup_container">
+                        <div class="left">
+                            <div class="row">
+                                <div> 환율 </div>
+                                <div> 1000원 </div>
+                            </div>
+                            <div class="row">
+                                <div> 시차 </div>
+                                <div> +08:00 </div>
+                            </div>
+                            <div class="row">
+                                <div> 코로나 </div>
+                                <div> 80,000 확진자 수 </div>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <p>현재 나의 위치는 ${location}입니다.</p>
+                            <p>기온은 ${temperature}이며, 지금은 ${hereTime}입니다.</p>
+                
+                            <p>${university}은 현재 ${universityTime}입니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container2">
+            <p class="search_title">교환배정 학교 검색 결과</p>
+            <p class="search_intro">입력하신 조건과 일치하는 교환학생 배정 대학 리스트입니다!<br>
+                                    클릭을 통해 더 자세한 정보를 확인하실 수 있습니다 :)</p>
+            <div class="result_box">
+                <ul id="results2">
+                </ul>
+            </div>
+            <a class="searchBtn" href="search.html">
+                다시 검색하기
+            </a>
+        </div>
+    </body>
+</html>
